@@ -10,7 +10,7 @@
         <!--Add Guest Registration-->
         <scene sceneID="Kpf-p0-yDC">
             <objects>
-                <tableViewController id="v2f-E6-byo" customClass="AddRegistrationTableViewController" customModule="HotelCalifornia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="v2f-E6-byo" customClass="AddRegistrationTableViewController" customModule="HotelBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HRX-Vy-Mz9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,14 +19,14 @@
                             <tableViewSection id="c4n-Nj-PDD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XyG-3b-rdo">
-                                        <rect key="frame" x="0.0" y="18" width="393" height="41.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="18" width="393" height="41.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XyG-3b-rdo" id="LLB-vr-UHr">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmE-Gt-osI">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="19.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -40,14 +40,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VRF-7i-UgZ">
-                                        <rect key="frame" x="0.0" y="59.666667938232422" width="393" height="41.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="59.333332061767578" width="393" height="41.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VRF-7i-UgZ" id="fgL-RE-nqf">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-WO-q4H">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="19.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -61,14 +61,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hyf-Fz-tG9">
-                                        <rect key="frame" x="0.0" y="101.33333587646484" width="393" height="41.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="100.66666412353516" width="393" height="41.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hyf-Fz-tG9" id="aKV-M0-3Pt">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pp-o5-pnP">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="353" height="19.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="353" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
@@ -86,7 +86,7 @@
                             <tableViewSection id="ag1-3T-SYH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="6wA-CR-yBy" detailTextLabel="5gi-dF-smb" style="IBUITableViewCellStyleValue1" id="w64-OX-Uhg">
-                                        <rect key="frame" x="0.0" y="179.00000381469729" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="177.99999618530276" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w64-OX-Uhg" id="eSm-sl-1ki">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -110,7 +110,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="216" id="qtO-dJ-5j7">
-                                        <rect key="frame" x="0.0" y="222.66667175292969" width="393" height="216"/>
+                                        <rect key="frame" x="0.0" y="221.66666412353516" width="393" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qtO-dJ-5j7" id="JZS-Hf-1JA">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="216"/>
@@ -132,7 +132,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="esu-Wr-sGP" detailTextLabel="w5p-Dz-m0G" style="IBUITableViewCellStyleValue1" id="jET-qb-J5e">
-                                        <rect key="frame" x="0.0" y="438.66667175292969" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="437.66666412353516" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jET-qb-J5e" id="lWU-U4-dKn">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -156,7 +156,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="216" id="ZIM-A2-1Ny">
-                                        <rect key="frame" x="0.0" y="482.33333969116211" width="393" height="216"/>
+                                        <rect key="frame" x="0.0" y="481.33333206176758" width="393" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZIM-A2-1Ny" id="MU5-j3-Uua">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="216"/>
@@ -186,7 +186,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Guest Registration" id="pVM-dB-CXj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="WeE-Rs-8yN"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ZxP-pw-BcK">
                             <connections>
                                 <action selector="doneBarButtonClicked:" destination="v2f-E6-byo" id="e1Z-Ff-a0o"/>
