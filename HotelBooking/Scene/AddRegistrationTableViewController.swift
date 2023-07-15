@@ -8,7 +8,7 @@
 import UIKit
 
 class AddRegistrationTableViewController: UITableViewController {
-
+    
     //MARK: - UI Elements
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -19,23 +19,44 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var checkOutDateLabel: UILabel!
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     
+    //MARK: - Properties
+    let checkInDateLabelIndexPath = IndexPath(row: 0, section: 1)
+    let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
+    
+    let checkOutDateLabelIndexPath = IndexPath(item: 2, section: 1)
+    let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
+    
+    
+    var isCheckInDatePickerShown : Bool = false {
+        didSet {
+            checkInDatePicker.isHidden = !isCheckInDatePickerShown
+        }
+    }
+    
+    var isCheckOutDatePickerShown : Bool = false {
+        didSet {
+            checkOutDateLabel.isHidden = !isCheckOutDatePickerShown
+        }
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsDatePicker()
-     
-
+        
+        
+        
     }
     
     
-
-  //MARK: - Actions
+    
+    //MARK: - Actions
     @IBAction func doneBarButtonClicked(_ sender: UIBarButtonItem) {
         guard let name = firstNameTextField.text, let lastName = lastNameTextField.text, let email = emailTextField.text else { return }
         
         let checkOutDate = checkOutDatePicker.date
         let checkInDate = checkInDatePicker.date
-    
+        
         print("Name \(name)")
         print("Last Name \(lastName)")
         print("Email \(email)")
@@ -72,5 +93,67 @@ extension AddRegistrationTableViewController {
     }
 }
 
+
+//MARK: - TableViewDelegate 
+extension AddRegistrationTableViewController {
+    
+    //height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath {
+        case checkInDatePickerCellIndexPath :
+            
+            if isCheckInDatePickerShown {
+                return 216
+            } else {
+                return 0
+            }
+            
+        case checkOutDatePickerCellIndexPath:
+            if isCheckOutDatePickerShown {
+                return 216
+            } else {
+                return 0
+            }
+        default:
+            return 44
+        }
+    }
+    
+    //select
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath {
+        case checkInDateLabelIndexPath:
+            
+            if isCheckInDatePickerShown {
+                isCheckInDatePickerShown = false
+            } else if isCheckInDatePickerShown {
+                isCheckOutDatePickerShown = false
+                isCheckInDatePickerShown = true
+            } else {
+                isCheckInDatePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        case checkOutDateLabelIndexPath:
+            if isCheckOutDatePickerShown {
+                isCheckOutDatePickerShown = false
+            } else if isCheckInDatePickerShown {
+                isCheckOutDatePickerShown = true
+                isCheckInDatePickerShown = false
+            } else {
+                isCheckOutDatePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        default:
+            break
+        }
+    }
+}
 
 
