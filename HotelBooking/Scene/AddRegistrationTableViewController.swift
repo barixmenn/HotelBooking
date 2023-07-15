@@ -19,6 +19,14 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var checkOutDateLabel: UILabel!
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     
+    @IBOutlet weak var numberOfAdultsLabel : UILabel!
+    @IBOutlet weak var numberOfAdultsStepper: UIStepper!
+    
+    @IBOutlet weak var numberOfChildrenLabel : UILabel!
+    @IBOutlet weak var numberOfChildrenStepper: UIStepper!
+    
+    
+    
     //MARK: - Properties
     let checkInDateLabelIndexPath = IndexPath(row: 0, section: 1)
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
@@ -43,6 +51,7 @@ class AddRegistrationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsDatePicker()
+        updateNumberOfGuests()
         
         
         
@@ -67,6 +76,10 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBAction func datePickerValueChanged(_ picker: UIPickerView) {
         updateDateViews()
     }
+    
+    @IBAction func stepperValueChanged(_ stepper: UIStepper) {
+        updateNumberOfGuests()
+    }
 }
 
 
@@ -83,6 +96,11 @@ extension AddRegistrationTableViewController {
         checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
     }
     
+    private func updateNumberOfGuests() {
+        numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
+        numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
+    }
+    
     private func settingsDatePicker() {
         let midnightToday = Calendar.current.startOfDay(for: Date())
         let oneDay : Double = 24 * 60 * 60
@@ -94,7 +112,7 @@ extension AddRegistrationTableViewController {
 }
 
 
-//MARK: - TableViewDelegate 
+//MARK: - TableViewDelegate
 extension AddRegistrationTableViewController {
     
     //height
