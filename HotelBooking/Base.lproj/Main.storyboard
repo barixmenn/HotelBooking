@@ -228,6 +228,43 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TAe-Hb-WD9">
+                                        <rect key="frame" x="0.0" y="827.66667556762695" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TAe-Hb-WD9" id="fOy-ix-lVO">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi (per day)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPg-g9-A3x">
+                                                    <rect key="frame" x="20" y="11.333333333333336" width="114" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFw-Ss-8sS">
+                                                    <rect key="frame" x="283" y="11.333333333333336" width="29" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyk-D0-ZTk">
+                                                    <rect key="frame" x="324" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+                                                    <connections>
+                                                        <action selector="wifiSwitchValueChanged:" destination="v2f-E6-byo" eventType="valueChanged" id="wZf-Ea-x5g"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eyk-D0-ZTk" firstAttribute="leading" secondItem="ZFw-Ss-8sS" secondAttribute="trailing" constant="12" id="9TB-FM-h1O"/>
+                                                <constraint firstItem="eyk-D0-ZTk" firstAttribute="centerY" secondItem="fOy-ix-lVO" secondAttribute="centerY" id="DNh-YZ-Vr8"/>
+                                                <constraint firstItem="SPg-g9-A3x" firstAttribute="leading" secondItem="fOy-ix-lVO" secondAttribute="leadingMargin" id="LBc-10-gKI"/>
+                                                <constraint firstItem="SPg-g9-A3x" firstAttribute="centerY" secondItem="fOy-ix-lVO" secondAttribute="centerY" id="NHd-bk-vyG"/>
+                                                <constraint firstItem="SPg-g9-A3x" firstAttribute="leading" secondItem="fOy-ix-lVO" secondAttribute="leadingMargin" id="QIn-bB-vnE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eyk-D0-ZTk" secondAttribute="trailing" id="Vdv-76-6Np"/>
+                                                <constraint firstItem="ZFw-Ss-8sS" firstAttribute="centerY" secondItem="fOy-ix-lVO" secondAttribute="centerY" id="f7b-b8-Kfp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -255,6 +292,7 @@
                         <outlet property="numberOfAdultsStepper" destination="pkP-8J-9gA" id="vVh-X4-v6O"/>
                         <outlet property="numberOfChildrenLabel" destination="SH4-zh-0J5" id="3mA-nE-yTD"/>
                         <outlet property="numberOfChildrenStepper" destination="Znj-to-Elb" id="tDW-Be-YVI"/>
+                        <outlet property="wifiSwitch" destination="eyk-D0-ZTk" id="QgC-j6-cus"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Dz-kV-Pm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
