@@ -24,7 +24,10 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBOutlet weak var numberOfChildrenLabel : UILabel!
     @IBOutlet weak var numberOfChildrenStepper: UIStepper!
+    
     @IBOutlet weak var wifiSwitch: UISwitch!
+    
+    @IBOutlet weak var roomTypeLabel: UILabel!
     
     
     
@@ -48,11 +51,14 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+    var roomType : RoomType?
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsDatePicker()
         updateNumberOfGuests()
+        updateRoomType()
         
         
         
@@ -116,11 +122,27 @@ extension AddRegistrationTableViewController {
         checkInDatePicker.minimumDate = midnightToday
         checkOutDatePicker.date = midnightToday
     }
+    
+    private func updateRoomType() {
+        if let roomType = roomType {
+            roomTypeLabel.text = roomType.name
+        } else {
+            roomTypeLabel.text = "No set"
+        }
+    }
 }
 
 
 //MARK: - TableViewDelegate
 extension AddRegistrationTableViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectRoomType" {
+            let destination = segue.destination as? SelectRoomTypeTableViewController
+            destination?.delegate = self
+            destination?.selectedRoomType = roomType
+        }
+    }
     
     //height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -181,4 +203,12 @@ extension AddRegistrationTableViewController {
     }
 }
 
+
+//MARK: - SelectRoomTypeTableViewControllerDelegate
+extension AddRegistrationTableViewController: SelectRoomTypeTableViewControllerDelegate {
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+    }
+}
 
