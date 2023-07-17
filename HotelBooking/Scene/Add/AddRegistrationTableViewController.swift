@@ -51,6 +51,21 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+    var registration: Registration? {
+        guard let roomType = roomType else { return nil }
+        
+        let firstName = firstNameTextField.text!
+        let lastName = lastNameTextField.text!
+        let email = emailTextField.text!
+        let checkOutDate = checkOutDatePicker.date
+        let checkInDate = checkInDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hashWifi = wifiSwitch.isOn
+        
+        return Registration(firstName: firstName, lastName: lastName, emailAdress: email, chechInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdults: numberOfAdults, numberOfChildren: numberOfChildren, roomType: roomType, wifi: hashWifi)
+    }
+    
     var roomType : RoomType?
     
     //MARK: - Lifecycle
@@ -67,19 +82,8 @@ class AddRegistrationTableViewController: UITableViewController {
     
     
     //MARK: - Actions
-    @IBAction func doneBarButtonClicked(_ sender: UIBarButtonItem) {
-        guard let name = firstNameTextField.text, let lastName = lastNameTextField.text, let email = emailTextField.text else { return }
-        
-        let checkOutDate = checkOutDatePicker.date
-        let checkInDate = checkInDatePicker.date
-        let wifiSwitch = wifiSwitch.isOn
-        
-        print("Name \(name)")
-        print("Last Name \(lastName)")
-        print("Email \(email)")
-        print("Check In Date \(checkInDate)")
-        print("Check Out Date \(checkOutDate)")
-        print("Wifi: \(wifiSwitch)")
+    @IBAction func cancelButtonClicked(_ sender: UIBarButtonItem) {
+     dismiss(animated: true)
     }
     
     @IBAction func datePickerValueChanged(_ picker: UIPickerView) {
