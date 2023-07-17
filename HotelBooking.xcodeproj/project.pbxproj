@@ -10,6 +10,7 @@
 		602EE90A2A6071C300108124 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602EE9092A6071C300108124 /* Registration.swift */; };
 		602EE90C2A60731E00108124 /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602EE90B2A60731E00108124 /* RoomType.swift */; };
 		602EE90F2A60769B00108124 /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602EE90E2A60769B00108124 /* AddRegistrationTableViewController.swift */; };
+		6066079B2A65846E0028368C /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6066079A2A65846E0028368C /* SelectRoomTypeTableViewController.swift */; };
 		607710682A5F3B1B0036F5D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607710672A5F3B1B0036F5D1 /* AppDelegate.swift */; };
 		6077106A2A5F3B1B0036F5D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607710692A5F3B1B0036F5D1 /* SceneDelegate.swift */; };
 		6077106F2A5F3B1B0036F5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6077106D2A5F3B1B0036F5D1 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		602EE9092A6071C300108124 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		602EE90B2A60731E00108124 /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 		602EE90E2A60769B00108124 /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		6066079A2A65846E0028368C /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
 		607710642A5F3B1B0036F5D1 /* HotelBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607710672A5F3B1B0036F5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607710692A5F3B1B0036F5D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				602EE90E2A60769B00108124 /* AddRegistrationTableViewController.swift */,
+				6066079A2A65846E0028368C /* SelectRoomTypeTableViewController.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6066079B2A65846E0028368C /* SelectRoomTypeTableViewController.swift in Sources */,
 				602EE90F2A60769B00108124 /* AddRegistrationTableViewController.swift in Sources */,
 				602EE90A2A6071C300108124 /* Registration.swift in Sources */,
 				602EE90C2A60731E00108124 /* RoomType.swift in Sources */,
